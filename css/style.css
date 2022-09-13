@@ -1,0 +1,826 @@
+@import url('shttps://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,600;1,100;1,200;1,400&display=swap');
+
+/*font-family: 'Kreon', serif;*/
+*{
+ margin: 0;
+ padding: 0; 
+ font-family: "Overpass", sans-serif;
+ text-decoration: none;
+ 
+ 
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  
+  body {
+    background: linear-gradient(to right, #ea1d6f 0%, #eb466b 100%);
+    
+  }
+  
+  body, button, input {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+  }
+  
+  .background {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .container .screen {
+    flex: 0 1 90px;
+    margin: auto;
+    padding: 10px;
+  }
+  
+  .screen {
+    position: relative;
+    background: #3e3e3e;
+    border-radius: 15px;
+  }
+  
+  .screen:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+    z-index: -1;
+  }
+  
+  .screen-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #4d4d4f;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .screen-header-left {
+    margin-right: auto;
+  }
+  
+  .screen-header-button {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 3px;
+    border-radius: 8px;
+    background: white;
+  }
+  
+  .screen-header-button.close {
+    background: #ed1c6f;
+  }
+  
+  .screen-header-button.maximize {
+    background: #e8e925;
+  }
+  
+  .screen-header-button.minimize {
+    background: #74c54f;
+  }
+  
+  .screen-header-right {
+    display: flex;
+  }
+  
+  .screen-header-ellipsis {
+    width: 3px;
+    height: 3px;
+    margin-left: 2px;
+    border-radius: 8px;
+    background: #999;
+  }
+  
+  .screen-body {
+    display: flex;
+  }
+  
+  .screen-body-item {
+    flex: 1;
+    padding: 50px;
+  }
+  
+  .screen-body-item.left {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .app-title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #ea1d6f;
+    font-size: 39px;
+  }
+  
+  .app-title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 25px;
+    height: 4px;
+    background: #ea1d6fcb;
+  }
+  
+  .app-contact {
+    margin-top: auto;
+    font-size: 8px;
+    color: #888;
+  }
+  
+  .app-form-group {
+    margin-bottom: 15px;
+  }
+  
+  .app-form-group.message {
+    margin-top: 40px;
+  }
+  
+  .app-form-group.buttons {
+    margin-bottom: 0;
+    text-align: right;
+  }
+  
+  .app-form-control {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #666;
+    color: #ddd;
+    font-size: 14px;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color .2s;
+  }
+  
+  .app-form-control::placeholder {
+    color: #666;
+  }
+  
+  .app-form-control:focus {
+    border-bottom-color: #ddd;
+  }
+  
+  .app-form-button {
+    background: none;
+    border: none;
+    color: #ea1d6f;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .app-form-button:hover {
+    color: #b9134f;
+  }
+  
+  .credits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: #ffa4bd;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+  }
+  
+  .credits-link {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .dribbble {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+  }
+  
+  @media screen and (max-width: 520px) {
+    .screen-body {
+      flex-direction: column;
+    }
+  
+    .screen-body-item.left {
+      margin-bottom: 30px;
+    }
+  
+    .app-title {
+      flex-direction: row;
+    }
+  
+    .app-title span {
+      margin-right: 12px;
+    }
+  
+    .app-title:after {
+      display: none;
+    }
+  }
+  
+
+h1{
+    
+    padding: 5px;
+    
+    text-align: center;
+    color: WHITE;;
+    
+}
+.logo{
+    animation: fadeInDown;
+    animation-duration: 1s;
+}
+
+
+
+.fondoIndex .logo{
+    width: 0 auto;
+    height: 130px;
+    
+    position: center;
+    display: block;
+    margin: 0px auto ;
+    flex-direction: column;
+    
+    
+}
+.fondoContacto .logo{
+    width: 0 auto;
+    height: 130px;
+    
+    position: center;
+    display: block;
+    margin: 0px auto ;
+    flex-direction: column;
+    
+    
+}
+
+.fondoTrabajos{
+    padding: 10px;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+    position: sticky;
+    top: 0;
+    background-color: rgba(10, 10, 10, 0.589);
+}
+nav{
+    display: block;
+    
+    /*background-color: rgba(255, 255, 255, 0.212);*/
+    
+    
+    padding: 10px;
+}
+
+/*HEADERS!!*/
+.headerIndex{
+    padding: 10px;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    background-color: rgba(10, 10, 10, 0.589);
+    
+    
+}
+.headerIndex a,ul{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.headerIndex ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    
+    width: 0 auto;
+    
+    margin: 0 auto;
+    justify-content: center;
+    
+    
+}
+.headerProdTitle{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+
+
+.headerTrabajos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.726);
+}
+
+
+.headerTrabajos img{
+    width: 150px;
+    padding: 15px;
+}
+
+.headerTrabajos ul{
+    display: flex;
+    list-style: none;
+    
+}
+
+.headerTrabajos li{
+    margin: 15px;
+}
+.headerTrabajos a{
+    color: white;
+    text-decoration: none;
+}
+li{
+    margin: 0 20px;
+    
+}
+.nav ul, li:hover{
+    
+    background-color: rgba(255, 0, 55, 0.884);
+    width: 0 px auto;
+    
+}
+
+main{
+    
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+h3{
+    margin-right: 2px ;
+    text-align: center;
+    color: white;
+}
+p{
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    margin-bottom: 10px;
+
+}
+
+.fondoIndex{
+    
+    background-image: url(//media.airgigs.com/gig_media/e10e6ed890d6ab9f532d9e997975740ddICmd1613802163/sound-recording-studio-music-166147-3840x2160.jpg?1659226719);
+    background-size: auto;
+    background-position: center;
+    
+}
+.fondoProductos{
+    background-color: rgba(216, 216, 216, 0.664);
+    background-size: cover;
+    background-position: center;
+}
+.fondoTrabajos{
+    background-image: url(https://images.unsplash.com/photo-1610716632424-4d45990bcd48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bXVzaWMlMjBwcm9kdWNlcnxlbnwwfHwwfHw%3D&w=1000&q=80);
+    background-size: auto;
+    background-position: center;
+}
+
+.carritoFondo{
+    background-color: rgb(133, 133, 133);
+}
+a{
+    color: white;
+    font-weight: 700;
+    letter-spacing: -.03em;
+    text-decoration: none;
+    
+    
+}
+.contRegistro h1, p{
+    color: black;
+}
+form{
+    
+    padding: 5px 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 1px 0;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    
+    
+}
+input{
+    color: rgb(0, 0, 0);
+    
+}
+.contIndex{
+    width: 500px;
+    height: 500x;
+    margin-top: 20px;
+    margin-bottom: 570px;
+    margin-right: 35px;
+    margin-left: 10px;
+    padding-top: 15px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    overflow: hidden;
+    
+    
+   
+}
+main .txtPrin{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* cards */
+.contenedorCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 60px;
+    animation: backInUp;
+    animation-duration: 1s;
+}
+
+.contenedorCards .card{
+    width: 18rem;
+    height: 25rem;
+    padding: 1rem;
+    background-color: black;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedorCards .card:hover{
+    box-shadow: 10px 10px 11px rgba(228, 0, 0, 0);
+    background-color: rgba(255, 0, 55, 0.884);
+    width: 20rem;
+}
+
+.contenedorCards .card .contImgCard .imgCard{
+    width: 100%;
+    height: 15rem;
+    border-radius: 2%;
+}
+
+.contenedorCards .card .contTxtCard .tituloCard, .precioCard{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    text-align: center;
+}
+
+.contenedorCards .card .contBtnCard{
+    width: 100%;
+}
+
+.contenedorCards .card .contBtnCard .btnComprar{
+    
+    font-size: 22px;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 17, 255);
+    border: 6;
+    border-color: rgb(194, 177, 181);
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
+ main .contenedorCards .card1{ 
+     order: 2; 
+     flex-grow: 5; 
+     flex-shrink: 0; 
+     flex-basis: 10rem; 
+     flex: 0 0 10rem; 
+ } 
+
+ main .contenedorCards .card2{ 
+     order: 1; 
+     flex-grow: 1; 
+ } 
+
+ main .contenedorCards .card3{ 
+     order: 4; 
+     flex-grow: 1; 
+ } 
+
+ main .contenedorCards .card4{ 
+     order: 3; 
+     flex-grow: 1; 
+} 
+
+footer{
+    
+    object-fit: cover cover;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    
+}
+.footerProd{
+    
+    background: black;
+    height: 70px;
+    border-top: 2px solid rgba(0, 0, 0, 0.24);  
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+}
+
+footer, .listFooter{
+display: flex;
+list-style: none;
+width: 480px;
+margin: 0 auto;
+justify-content: center;
+}
+
+footer img{
+   
+    
+    width: 100%;
+    height: 5rem;
+    border-radius: 2%;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*carrito*/
+.container {
+    padding: 16px;
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* Set a style for the submit/register button */
+  .registerbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .registerbtn:hover {
+    opacity:1;
+  }
+  
+  
+  .signin {
+    background-color: #1215d460;
+    text-align: center;
+  }
+  .titleButton h1{
+    color: white;
+    
+    
+    
+  }
+  .contTitle{
+    background-color: rgba(0, 0, 0, 0.911);
+    border-radius: 10%;
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+   
+}
+.footerIcon2{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    align-items: center;
+    
+}
+.footerIcon2 .fa-instagram{
+    padding: 30px
+    
+}
+.footerIcon2 .fa-whatsapp{
+    padding: 30px
+    
+}
+  
+  
+  
+.titleButton{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 180px;
+    animation: backInUp;
+    animation-duration: 1s;
+    
+    
+}
+.titleButton .contTitle .footerIcon{
+    font-size: 25px;
+    text-decoration: none;
+    padding-top: 10px;
+}
+/* Iconos social media*/
+
+
+
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+    color: rgb(255, 0, 85);
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-instagram {
+    
+    color: white;
+    text-decoration: none;
+  }
+  .fa-whatsapp {
+    
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Twitter */
+  .fa-youtube {
+    
+    color: white;
+  }
+
+  .footerP{
+    display: flex;
+    justify-content: center;
+   
+    
+    
+    }
+    footer{
+        height: 70px; 
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+ 
+ 
+
+
+/*.btn-primary {
+    background-color: #cc003a;
+    color: #fff;
+    border-color: #000000;
+}
+*/
+  /*Videos*/
+  
+  .grid-container{
+    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+
+    background-color: rgba(253, 253, 253, 0.055);
+    animation: zoomIn;
+    animation-duration: 0.5s;
+
+    
+  }
+  .grid-container iframe{
+    padding: 25px;
+    width: 500px;
+    
+  }
+  @media(max-width: 850px){
+  .grid-container{
+    grid-template-columns: repeat(1,1fr);
+}
+
+  
+}
+  
+  @media(max-width: 650px){
+    .headerIndex, .headerTrabajos{
+        flex-direction: column;
+        
+        
+    } 
+    .headerIndex ul, .headerTrabajos ul{
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap
+        
+    }
+    
+    @media screen and (max-width: 600px) {
+        .screen-body {
+          padding: 40px;
+        }
+      
+        .screen-body-item {
+          padding: 0;
+        }
+      }
+      
+
+ 
+    
+    .headerIndex img{
+            width: 150px;
+        }
+    .headerIndex .listFooter, .headerTrabajos .listFooter{
+        width: 150px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .grid-container iframe{
+        grid-template-columns: repeat(1,1fr);
+        width: 320px;
+    }
+  
+  
+  
+  
+    }

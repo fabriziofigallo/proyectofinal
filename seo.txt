@@ -1,0 +1,17 @@
+1. Coloque etiquetas keywords en todos los HTML:
+Keywords: beats, instrumentales, venta de beats, beats reggaeton, produccion musical, absolut music, venta instrumentales
+
+2. Coloque etiquetas description en todos los HTML:
+index: Absolut Music es un servicio de produccion musical con el objetivo de potenciar a los artistas y sellos discograficos.
+carrito: Carrito para agregar tus productos interesados y adquirirlos.
+contacto: Formulario para contactarnos.
+productos: Productos y servicios que ofrecemos.
+trabajos: Trabajos realizados por Absolut Music.
+
+3. Coloque un titulo distinto para cada HTML:
+index: Absolut Music | Inicio
+carrito: Absolut Music | Carrito
+contacto: Absolut Music | Contacto
+productos: Absolut Music | Productos
+trabajos: Absolut Music | Trabajos
+
